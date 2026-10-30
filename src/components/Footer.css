@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap');
+
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+
+.site-footer {
+  position: relative;
+  background: linear-gradient(180deg, #030d1e 0%, #01060e 100%);
+  width: 100%;
+  margin-top: auto;
+  /* Pushes footer to bottom if in flex container */
+  padding-bottom: 0;
+  z-index: 1;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Wave Animation Container */
+.footer-waves-container {
+  position: absolute;
+  top: -145px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.waves-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Grid Dot Patterns */
+.dot-pattern {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background-image: radial-gradient(rgba(0, 180, 216, 0.15) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dot-pattern-left {
+  left: 20px;
+  bottom: 80px;
+  opacity: 0.7;
+}
+
+.dot-pattern-right {
+  right: 20px;
+  top: 60px;
+  opacity: 0.7;
+}
+
+/* Footer Inner Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 0 24px;
+  position: relative;
+  z-index: 5;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr;
+  gap: 40px;
+}
+
+/* Column Headers & Typography */
+.footer-col h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col h3 svg.header-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Brand / Logo Section */
+.brand-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Glow aura behind the logo */
+.logo-glow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -10px;
+  top: -10px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.25) 0%, rgba(120, 216, 92, 0.1) 50%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.logo-svg {
+  position: relative;
+  z-index: 1;
+  width: 230px;
+  height: 55px;
+  display: block;
+}
+
+.brand-description {
+  color: #8a99ad;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-weight: 400;
+  max-width: 320px;
+}
+
+/* Social Links with Color Glows */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+/* Specific Glows matching image */
+.social-icon.facebook:hover {
+  background: rgba(24, 119, 242, 0.1);
+  border-color: #1877f2;
+  color: #1877f2;
+  box-shadow: 0 0 15px rgba(24, 119, 242, 0.4);
+  transform: translateY(-2px);
+}
+
+.social-icon.linkedin:hover {
+  background: rgba(10, 102, 194, 0.1);
+  border-color: #0a66c2;
+  color: #0a66c2;
+  box-shadow: 0 0 15px rgba(10, 102, 194, 0.4);
+  transform: translateY(-2px);
+}
+
+.social-icon.youtube:hover {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: #ff0000;
+  color: #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.social-icon.x-twitter:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Links Lists (Quick Links & Resources) */
+.links-list {
+  list-style: none;
+}
+
+.links-list li {
+  margin-bottom: 2px;
+}
+
+.links-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8a99ad;
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.02);
+}
+
+.links-list a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+  border-bottom-color: rgba(120, 216, 92, 0.2);
+}
+
+.link-chevron {
+  width: 10px;
+  height: 10px;
+  stroke: #78d85c;
+  transition: transform 0.3s ease;
+}
+
+.links-list a:hover .link-chevron {
+  transform: translateX(3px);
+}
+
+/* Contact Details Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #8a99ad;
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #ffffff;
+}
+
+.contact-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: #78d85c;
+  flex-shrink: 0;
+}
+
+/* Solar Panel with Leaves Icon (Top of Contact Col) */
+.solar-logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.solar-icon-large {
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 8px rgba(120, 216, 92, 0.2));
+}
+
+/* Section Divider in Column 4 */
+.col-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px 0 25px 0;
+  width: 100%;
+}
+
+/* Newsletter Section */
+.newsletter-section h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-desc {
+  color: #8a99ad;
+  font-size: 13.5px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(3, 13, 30, 0.6);
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #78d85c;
+  box-shadow: 0 0 10px rgba(120, 216, 92, 0.25);
+  background: rgba(3, 13, 30, 0.8);
+}
+
+.email-input::placeholder {
+  color: #57657a;
+}
+
+.submit-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #78d85c 0%, #4ec334 100%);
+  color: #030d1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(120, 216, 92, 0.5);
+  filter: brightness(1.1);
+}
+
+.submit-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #030d1e;
+}
+
+/* Bottom Copyright & Legal Links */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 50px;
+  padding: 25px 0 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright-text {
+  color: #8a99ad;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.copyright-text svg {
+  width: 16px;
+  height: 16px;
+  stroke: #78d85c;
+}
+
+.bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bottom-links a {
+  color: #8a99ad;
+  text-decoration: none;
+  font-size: 13.5px;
+  transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+  color: #ffffff;
+}
+
+.bottom-divider {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+  user-select: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-waves-container {
+    top: -115px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .brand-description {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-waves-container {
+    top: -95px;
+    height: 100px;
+  }
+}

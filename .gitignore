@@ -1,0 +1,63 @@
+# ─── Environment Variables (NEVER commit these) ───────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+server/.env
+server/.env.local
+server/.env.production
+
+# ─── Database Dumps & Exports (Sensitive Customer & Admin Data) ─────
+database_seed.json
+database_export.json
+seed_data.json
+seed_data_no_ids.json
+*.seed.json
+database_exports/
+seeds/
+server/exports/
+server/uploads/
+seedTargetDatabase.js
+PAYMENT_INTEGRATION.md
+
+# ─── Dependencies ──────────────────────────────────────────────────
+node_modules/
+server/node_modules/
+
+# ─── Build Output ──────────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+server/dist/
+
+# ─── Logs ──────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── Debug & Test Utilities ────────────────────────────────────────
+server/src/utils/testLogin.js
+
+# ─── OS / System Files ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ─── Editor & IDE Files ────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.local
+
+# ─── Misc ──────────────────────────────────────────────────────────
+*.tsbuildinfo
+.cache/
